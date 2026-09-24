@@ -261,7 +261,7 @@ function bindDeck() {
       const touch = event.changedTouches[0];
       const dx = touch.clientX - touchX;
       const dy = touch.clientY - touchY;
-      if (event.target.closest && event.target.closest(".handson__code, textarea")) {
+      if (event.target.closest && event.target.closest("textarea")) {
         return;
       }
       if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
@@ -366,7 +366,7 @@ function sequence() {
       feedback.classList.add("is-ok");
       feedback.textContent =
         state.sequence.length === STAGE_COUNT
-          ? "Path confirmed. This is the order the session uses."
+          ? "Path confirmed. This is the order the workshop uses."
           : `Stage ${pad(n)} in place.`;
     } else {
       feedback.classList.remove("is-ok");
@@ -396,7 +396,7 @@ function sequence() {
     count.textContent = String(state.sequence.length);
     if (state.sequence.length === STAGE_COUNT) {
       feedback.classList.add("is-ok");
-      feedback.textContent = "Path confirmed. This is the order the session uses.";
+      feedback.textContent = "Path confirmed. This is the order the workshop uses.";
     }
   }
 

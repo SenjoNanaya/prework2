@@ -25,7 +25,7 @@
       <ol class="ticks" data-ticks aria-hidden="true">
         <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
       </ol>
-      <p class="mono band__readout" aria-live="polite"><span data-readout>01</span> // 14</p>
+      <p class="mono band__readout" aria-live="polite"><span data-readout>01</span> // 28</p>
     </div>
     <p class="mono band__org">UPLB DATA SCIENCE GUILD</p>
   </div>
@@ -33,29 +33,38 @@
 
 <main class="deck" id="deck">
   <section class="slide slide--title is-active" id="s01" data-slide="1" data-label="TITLE" aria-label="Title" tabindex="-1">
-    <div class="slide__inner slide__inner--center">
+    <div class="slide__inner">
       <div class="hero">
         <h1 id="hero-title">The data science life cycle</h1>
-        <p class="hero__intro">Pre-work for the UPSkill 1S2627 applicants workshop. Walk the seven stages, read what the hands-on asks of you, and bring one question. About six minutes.</p>
-        <p class="mono hero__meta">APPLICANT PRE-WORK :: SHEETS + COLAB</p>
+        <div class="hero__side">
+          <p class="hero__intro">Pre-work for the UPSkill 1S2627 applicants workshop. Walk the seven stages, read what the hands-on asks of you, and bring one question. About six minutes.</p>
+          <p class="mono hero__meta">APPLICANT PRE-WORK :: SHEETS + COLAB</p>
+        </div>
+        <ul class="hero__tags mono">
+          <li>SEVEN STAGES</li>
+          <li>THREE PHASES</li>
+          <li>ONE QUESTION TO BRING</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section class="slide" id="s02" data-slide="2" data-label="BRIEF" aria-labelledby="brief-title" tabindex="-1">
-    <div class="slide__inner slide__inner--center">
+    <div class="slide__inner">
       <div class="slide__body slide__body--brief">
-        <p class="mono module__label">BRIEF :: WARM-UP</p>
+        <p class="mono module__label">MODULE 01 :: WARM-UP</p>
         <h2 class="visually-hidden" id="brief-title">Brief</h2>
         <p class="question">What did you eat last night?</p>
-        <div class="choices" data-hook role="group" aria-label="Answer the warm-up question">
-          <button type="button" class="choice" data-hook-answer="0">Home-cooked</button>
-          <button type="button" class="choice" data-hook-answer="1">Takeout or delivery</button>
-          <button type="button" class="choice" data-hook-answer="2">I skipped a meal</button>
-        </div>
-        <p class="feedback" data-hook-feedback aria-live="polite"></p>
-        <div class="reveal" data-hook-reveal hidden>
-          <p>That answer is data. What you ate, when, and what it cost all left records: receipts, app orders, messages, a bank line. The workshop opens by asking what data you already produce without noticing.</p>
+        <div class="brief__ask">
+          <div class="choices" data-hook role="group" aria-label="Answer the warm-up question">
+            <button type="button" class="choice" data-hook-answer="0">Home-cooked</button>
+            <button type="button" class="choice" data-hook-answer="1">Takeout or delivery</button>
+            <button type="button" class="choice" data-hook-answer="2">I skipped a meal</button>
+          </div>
+          <p class="feedback" data-hook-feedback aria-live="polite"></p>
+          <div class="reveal" data-hook-reveal hidden>
+            <p>That answer is data. What you ate, when, and what it cost left records: receipts, app orders, messages, a bank line. The workshop opens by asking what data you already produce without noticing.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -91,7 +100,7 @@
               </button>
             </li>
             <li>
-              <button type="button" class="node__head" data-goto="5" data-stage="2">
+              <button type="button" class="node__head" data-goto="7" data-stage="2">
                 <span class="marker" data-marker="2" aria-hidden="true"></span>
                 <span class="mono node__num">02</span>
                 <span class="node__title">Data ingestion</span>
@@ -109,7 +118,7 @@
           </header>
           <ol class="rail">
             <li>
-              <button type="button" class="node__head" data-goto="6" data-stage="3">
+              <button type="button" class="node__head" data-goto="10" data-stage="3">
                 <span class="marker" data-marker="3" aria-hidden="true"></span>
                 <span class="mono node__num">03</span>
                 <span class="node__title">Data storage &amp; processing</span>
@@ -117,7 +126,7 @@
               </button>
             </li>
             <li>
-              <button type="button" class="node__head" data-goto="7" data-stage="4">
+              <button type="button" class="node__head" data-goto="13" data-stage="4">
                 <span class="marker" data-marker="4" aria-hidden="true"></span>
                 <span class="mono node__num">04</span>
                 <span class="node__title">Data analysis</span>
@@ -125,7 +134,7 @@
               </button>
             </li>
             <li>
-              <button type="button" class="node__head" data-goto="8" data-stage="5">
+              <button type="button" class="node__head" data-goto="16" data-stage="5">
                 <span class="marker" data-marker="5" aria-hidden="true"></span>
                 <span class="mono node__num">05</span>
                 <span class="node__title">Data modeling</span>
@@ -143,7 +152,7 @@
           </header>
           <ol class="rail">
             <li>
-              <button type="button" class="node__head" data-goto="9" data-stage="6">
+              <button type="button" class="node__head" data-goto="19" data-stage="6">
                 <span class="marker" data-marker="6" aria-hidden="true"></span>
                 <span class="mono node__num">06</span>
                 <span class="node__title">Model deployment</span>
@@ -151,7 +160,7 @@
               </button>
             </li>
             <li>
-              <button type="button" class="node__head" data-goto="10" data-stage="7">
+              <button type="button" class="node__head" data-goto="22" data-stage="7">
                 <span class="marker" data-marker="7" aria-hidden="true"></span>
                 <span class="mono node__num">07</span>
                 <span class="node__title">Storytelling &amp; communication</span>
@@ -164,118 +173,369 @@
     </div>
   </section>
 
-  <section class="slide slide--stage" id="s04" data-slide="4" data-stage="1" data-label="STAGE 01 :: PROBLEM UNDERSTANDING" aria-labelledby="stage-1-title" tabindex="-1">
-    <div class="slide__inner slide__inner--center">
-      <div class="slide__body slide__body--stage">
-        <p class="mono module__label">PHASE 01 :: DEFINE</p>
-        <h2 class="stage__claim" id="stage-1-title">Start with the problem, not the data.</h2>
-        <ul class="points">
-          <li>Understand how data science applies to the domain.</li>
-          <li>Data scientists and domain experts frame it together.</li>
-          <li>Weigh resources, value, risks, and ethical concerns.</li>
-        </ul>
-        <p class="mono status">STAGE 01 / 07</p>
+  <section class="slide slide--point" id="s04" data-slide="4" data-stage="1" data-label="STAGE 01 :: PROBLEM UNDERSTANDING // 01" aria-labelledby="s04-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 01 :: PROBLEM UNDERSTANDING</p>
+        <p class="mono slide__count">POINT 01 / 03</p>
+        <p class="point__claim">Start with the problem, not the data.</p>
+        <h2 class="point__text" id="s04-h">Understand how data science applies to the domain.</h2>
+        <ol class="point__list">
+          <li class="is-current"><span class="mono">01</span> Understand how data science applies to the domain.</li>
+          <li><span class="mono">02</span> Data scientists and domain experts frame it together.</li>
+          <li><span class="mono">03</span> Weigh resources, value, risks, and ethical concerns.</li>
+        </ol>
+        <p class="mono status">PHASE 01 :: DEFINE  //  STAGE 01 / 07</p>
       </div>
     </div>
   </section>
 
-  <section class="slide slide--stage" id="s05" data-slide="5" data-stage="2" data-label="STAGE 02 :: DATA INGESTION" aria-labelledby="stage-2-title" tabindex="-1">
-    <div class="slide__inner slide__inner--center">
-      <div class="slide__body slide__body--stage">
-        <p class="mono module__label">PHASE 01 :: DEFINE</p>
-        <h2 class="stage__claim" id="stage-2-title">Collect what the problem needs.</h2>
-        <ul class="points">
-          <li>Structured data: customer records, tables, transactions.</li>
-          <li>Unstructured data: video, images, and audio.</li>
-          <li>Collected by manual entry, scraping, or live streams.</li>
-        </ul>
-        <p class="mono status">STAGE 02 / 07</p>
+  <section class="slide slide--point" id="s05" data-slide="5" data-stage="1" data-label="STAGE 01 :: PROBLEM UNDERSTANDING // 02" aria-labelledby="s05-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 01 :: PROBLEM UNDERSTANDING</p>
+        <p class="mono slide__count">POINT 02 / 03</p>
+        <p class="point__claim">Start with the problem, not the data.</p>
+        <h2 class="point__text" id="s05-h">Data scientists and domain experts frame it together.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Understand how data science applies to the domain.</li>
+          <li class="is-current"><span class="mono">02</span> Data scientists and domain experts frame it together.</li>
+          <li><span class="mono">03</span> Weigh resources, value, risks, and ethical concerns.</li>
+        </ol>
+        <p class="mono status">PHASE 01 :: DEFINE  //  STAGE 01 / 07</p>
       </div>
     </div>
   </section>
 
-  <section class="slide slide--stage" id="s06" data-slide="6" data-stage="3" data-label="STAGE 03 :: DATA STORAGE &amp; PROCESSING" aria-labelledby="stage-3-title" tabindex="-1">
-    <div class="slide__inner slide__inner--center">
-      <div class="slide__body slide__body--stage">
-        <p class="mono module__label">PHASE 02 :: BUILD</p>
-        <h2 class="stage__claim" id="stage-3-title">Clean it before you store it.</h2>
-        <ul class="points">
-          <li>Set standards for storing and structuring data.</li>
-          <li>Clean and transform with ETL: extract, transform, load.</li>
-          <li>Data preparation ensures quality before storage.</li>
-        </ul>
-        <p class="mono status">STAGE 03 / 07</p>
+  <section class="slide slide--point" id="s06" data-slide="6" data-stage="1" data-label="STAGE 01 :: PROBLEM UNDERSTANDING // 03" aria-labelledby="s06-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 01 :: PROBLEM UNDERSTANDING</p>
+        <p class="mono slide__count">POINT 03 / 03</p>
+        <p class="point__claim">Start with the problem, not the data.</p>
+        <h2 class="point__text" id="s06-h">Weigh resources, value, risks, and ethical concerns.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Understand how data science applies to the domain.</li>
+          <li><span class="mono">02</span> Data scientists and domain experts frame it together.</li>
+          <li class="is-current"><span class="mono">03</span> Weigh resources, value, risks, and ethical concerns.</li>
+        </ol>
+        <p class="mono status">PHASE 01 :: DEFINE  //  STAGE 01 / 07</p>
       </div>
     </div>
   </section>
 
-  <section class="slide slide--stage" id="s07" data-slide="7" data-stage="4" data-label="STAGE 04 :: DATA ANALYSIS" aria-labelledby="stage-4-title" tabindex="-1">
-    <div class="slide__inner slide__inner--center">
-      <div class="slide__body slide__body--stage">
-        <p class="mono module__label">PHASE 02 :: BUILD</p>
-        <h2 class="stage__claim" id="stage-4-title">Let the data speak.</h2>
-        <ul class="points">
-          <li>Apply machine learning algorithms and statistical models.</li>
-          <li>Predict, classify, and reveal hidden patterns.</li>
-          <li>Insights must serve the goal of the project.</li>
-        </ul>
-        <p class="mono status">STAGE 04 / 07</p>
+  <section class="slide slide--point" id="s07" data-slide="7" data-stage="2" data-label="STAGE 02 :: DATA INGESTION // 01" aria-labelledby="s07-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 02 :: DATA INGESTION</p>
+        <p class="mono slide__count">POINT 01 / 03</p>
+        <p class="point__claim">Collect what the problem needs.</p>
+        <h2 class="point__text" id="s07-h">Structured data: customer records, tables, transactions.</h2>
+        <ol class="point__list">
+          <li class="is-current"><span class="mono">01</span> Structured data: customer records, tables, transactions.</li>
+          <li><span class="mono">02</span> Unstructured data: video, images, and audio.</li>
+          <li><span class="mono">03</span> Collected by manual entry, scraping, or live streams.</li>
+        </ol>
+        <p class="mono status">PHASE 01 :: DEFINE  //  STAGE 02 / 07</p>
       </div>
     </div>
   </section>
 
-  <section class="slide slide--stage" id="s08" data-slide="8" data-stage="5" data-label="STAGE 05 :: DATA MODELING" aria-labelledby="stage-5-title" tabindex="-1">
-    <div class="slide__inner slide__inner--center">
-      <div class="slide__body slide__body--stage">
-        <p class="mono module__label">PHASE 02 :: BUILD</p>
-        <h2 class="stage__claim" id="stage-5-title">Choose the model that fits.</h2>
-        <ul class="points">
-          <li>Select a model type that matches the problem.</li>
-          <li>Choose algorithms that extract insight effectively.</li>
-          <li>Prevent overfitting: perform on train and test data.</li>
-        </ul>
-        <p class="mono status">STAGE 05 / 07</p>
+  <section class="slide slide--point" id="s08" data-slide="8" data-stage="2" data-label="STAGE 02 :: DATA INGESTION // 02" aria-labelledby="s08-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 02 :: DATA INGESTION</p>
+        <p class="mono slide__count">POINT 02 / 03</p>
+        <p class="point__claim">Collect what the problem needs.</p>
+        <h2 class="point__text" id="s08-h">Unstructured data: video, images, and audio.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Structured data: customer records, tables, transactions.</li>
+          <li class="is-current"><span class="mono">02</span> Unstructured data: video, images, and audio.</li>
+          <li><span class="mono">03</span> Collected by manual entry, scraping, or live streams.</li>
+        </ol>
+        <p class="mono status">PHASE 01 :: DEFINE  //  STAGE 02 / 07</p>
       </div>
     </div>
   </section>
 
-  <section class="slide slide--stage" id="s09" data-slide="9" data-stage="6" data-label="STAGE 06 :: MODEL DEPLOYMENT" aria-labelledby="stage-6-title" tabindex="-1">
-    <div class="slide__inner slide__inner--center">
-      <div class="slide__body slide__body--stage">
-        <p class="mono module__label">PHASE 03 :: DELIVER</p>
-        <h2 class="stage__claim" id="stage-6-title">Put the model to work.</h2>
-        <ul class="points">
-          <li>Create the delivery mechanism that carries the model.</li>
-          <li>Make it accessible to users, applications, and systems.</li>
-          <li>Deploy anywhere from dashboards to cloud environments.</li>
-        </ul>
-        <p class="mono status">STAGE 06 / 07</p>
+  <section class="slide slide--point" id="s09" data-slide="9" data-stage="2" data-label="STAGE 02 :: DATA INGESTION // 03" aria-labelledby="s09-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 02 :: DATA INGESTION</p>
+        <p class="mono slide__count">POINT 03 / 03</p>
+        <p class="point__claim">Collect what the problem needs.</p>
+        <h2 class="point__text" id="s09-h">Collected by manual entry, scraping, or live streams.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Structured data: customer records, tables, transactions.</li>
+          <li><span class="mono">02</span> Unstructured data: video, images, and audio.</li>
+          <li class="is-current"><span class="mono">03</span> Collected by manual entry, scraping, or live streams.</li>
+        </ol>
+        <p class="mono status">PHASE 01 :: DEFINE  //  STAGE 02 / 07</p>
       </div>
     </div>
   </section>
 
-  <section class="slide slide--stage" id="s10" data-slide="10" data-stage="7" data-label="STAGE 07 :: STORYTELLING &amp; COMMUNICATION" aria-labelledby="stage-7-title" tabindex="-1">
-    <div class="slide__inner slide__inner--center">
-      <div class="slide__body slide__body--stage">
-        <p class="mono module__label">PHASE 03 :: DELIVER</p>
-        <h2 class="stage__claim" id="stage-7-title">Make the insight land.</h2>
-        <ul class="points">
-          <li>Present findings in simple language and visuals.</li>
-          <li>Design for stakeholders without technical backgrounds.</li>
-          <li>The goal: informed decisions, not just charts.</li>
-        </ul>
-        <p class="mono status">STAGE 07 / 07</p>
+  <section class="slide slide--point" id="s10" data-slide="10" data-stage="3" data-label="STAGE 03 :: DATA STORAGE &amp; PROCESSING // 01" aria-labelledby="s10-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 03 :: DATA STORAGE &amp; PROCESSING</p>
+        <p class="mono slide__count">POINT 01 / 03</p>
+        <p class="point__claim">Clean it before you store it.</p>
+        <h2 class="point__text" id="s10-h">Set standards for storing and structuring data.</h2>
+        <ol class="point__list">
+          <li class="is-current"><span class="mono">01</span> Set standards for storing and structuring data.</li>
+          <li><span class="mono">02</span> Clean and transform with ETL: extract, transform, load.</li>
+          <li><span class="mono">03</span> Data preparation ensures quality before storage.</li>
+        </ol>
+        <p class="mono status">PHASE 02 :: BUILD  //  STAGE 03 / 07</p>
       </div>
     </div>
   </section>
 
-  <section class="slide" id="s11" data-slide="11" data-label="SEQUENCE CHECK" aria-labelledby="sequence-title" tabindex="-1">
+  <section class="slide slide--point" id="s11" data-slide="11" data-stage="3" data-label="STAGE 03 :: DATA STORAGE &amp; PROCESSING // 02" aria-labelledby="s11-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 03 :: DATA STORAGE &amp; PROCESSING</p>
+        <p class="mono slide__count">POINT 02 / 03</p>
+        <p class="point__claim">Clean it before you store it.</p>
+        <h2 class="point__text" id="s11-h">Clean and transform with ETL: extract, transform, load.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Set standards for storing and structuring data.</li>
+          <li class="is-current"><span class="mono">02</span> Clean and transform with ETL: extract, transform, load.</li>
+          <li><span class="mono">03</span> Data preparation ensures quality before storage.</li>
+        </ol>
+        <p class="mono status">PHASE 02 :: BUILD  //  STAGE 03 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--point" id="s12" data-slide="12" data-stage="3" data-label="STAGE 03 :: DATA STORAGE &amp; PROCESSING // 03" aria-labelledby="s12-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 03 :: DATA STORAGE &amp; PROCESSING</p>
+        <p class="mono slide__count">POINT 03 / 03</p>
+        <p class="point__claim">Clean it before you store it.</p>
+        <h2 class="point__text" id="s12-h">Data preparation ensures quality before storage.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Set standards for storing and structuring data.</li>
+          <li><span class="mono">02</span> Clean and transform with ETL: extract, transform, load.</li>
+          <li class="is-current"><span class="mono">03</span> Data preparation ensures quality before storage.</li>
+        </ol>
+        <p class="mono status">PHASE 02 :: BUILD  //  STAGE 03 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--point" id="s13" data-slide="13" data-stage="4" data-label="STAGE 04 :: DATA ANALYSIS // 01" aria-labelledby="s13-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 04 :: DATA ANALYSIS</p>
+        <p class="mono slide__count">POINT 01 / 03</p>
+        <p class="point__claim">Let the data speak.</p>
+        <h2 class="point__text" id="s13-h">Apply machine learning algorithms and statistical models.</h2>
+        <ol class="point__list">
+          <li class="is-current"><span class="mono">01</span> Apply machine learning algorithms and statistical models.</li>
+          <li><span class="mono">02</span> Predict, classify, and reveal hidden patterns.</li>
+          <li><span class="mono">03</span> Insights must serve the goal of the project.</li>
+        </ol>
+        <p class="mono status">PHASE 02 :: BUILD  //  STAGE 04 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--point" id="s14" data-slide="14" data-stage="4" data-label="STAGE 04 :: DATA ANALYSIS // 02" aria-labelledby="s14-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 04 :: DATA ANALYSIS</p>
+        <p class="mono slide__count">POINT 02 / 03</p>
+        <p class="point__claim">Let the data speak.</p>
+        <h2 class="point__text" id="s14-h">Predict, classify, and reveal hidden patterns.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Apply machine learning algorithms and statistical models.</li>
+          <li class="is-current"><span class="mono">02</span> Predict, classify, and reveal hidden patterns.</li>
+          <li><span class="mono">03</span> Insights must serve the goal of the project.</li>
+        </ol>
+        <p class="mono status">PHASE 02 :: BUILD  //  STAGE 04 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--point" id="s15" data-slide="15" data-stage="4" data-label="STAGE 04 :: DATA ANALYSIS // 03" aria-labelledby="s15-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 04 :: DATA ANALYSIS</p>
+        <p class="mono slide__count">POINT 03 / 03</p>
+        <p class="point__claim">Let the data speak.</p>
+        <h2 class="point__text" id="s15-h">Insights must serve the goal of the project.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Apply machine learning algorithms and statistical models.</li>
+          <li><span class="mono">02</span> Predict, classify, and reveal hidden patterns.</li>
+          <li class="is-current"><span class="mono">03</span> Insights must serve the goal of the project.</li>
+        </ol>
+        <p class="mono status">PHASE 02 :: BUILD  //  STAGE 04 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--point" id="s16" data-slide="16" data-stage="5" data-label="STAGE 05 :: DATA MODELING // 01" aria-labelledby="s16-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 05 :: DATA MODELING</p>
+        <p class="mono slide__count">POINT 01 / 03</p>
+        <p class="point__claim">Choose the model that fits.</p>
+        <h2 class="point__text" id="s16-h">Select a model type that matches the problem.</h2>
+        <ol class="point__list">
+          <li class="is-current"><span class="mono">01</span> Select a model type that matches the problem.</li>
+          <li><span class="mono">02</span> Choose algorithms that extract insight effectively.</li>
+          <li><span class="mono">03</span> Prevent overfitting: perform on train and test data.</li>
+        </ol>
+        <p class="mono status">PHASE 02 :: BUILD  //  STAGE 05 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--point" id="s17" data-slide="17" data-stage="5" data-label="STAGE 05 :: DATA MODELING // 02" aria-labelledby="s17-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 05 :: DATA MODELING</p>
+        <p class="mono slide__count">POINT 02 / 03</p>
+        <p class="point__claim">Choose the model that fits.</p>
+        <h2 class="point__text" id="s17-h">Choose algorithms that extract insight effectively.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Select a model type that matches the problem.</li>
+          <li class="is-current"><span class="mono">02</span> Choose algorithms that extract insight effectively.</li>
+          <li><span class="mono">03</span> Prevent overfitting: perform on train and test data.</li>
+        </ol>
+        <p class="mono status">PHASE 02 :: BUILD  //  STAGE 05 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--point" id="s18" data-slide="18" data-stage="5" data-label="STAGE 05 :: DATA MODELING // 03" aria-labelledby="s18-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 05 :: DATA MODELING</p>
+        <p class="mono slide__count">POINT 03 / 03</p>
+        <p class="point__claim">Choose the model that fits.</p>
+        <h2 class="point__text" id="s18-h">Prevent overfitting: perform on train and test data.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Select a model type that matches the problem.</li>
+          <li><span class="mono">02</span> Choose algorithms that extract insight effectively.</li>
+          <li class="is-current"><span class="mono">03</span> Prevent overfitting: perform on train and test data.</li>
+        </ol>
+        <p class="mono status">PHASE 02 :: BUILD  //  STAGE 05 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--point" id="s19" data-slide="19" data-stage="6" data-label="STAGE 06 :: MODEL DEPLOYMENT // 01" aria-labelledby="s19-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 06 :: MODEL DEPLOYMENT</p>
+        <p class="mono slide__count">POINT 01 / 03</p>
+        <p class="point__claim">Put the model to work.</p>
+        <h2 class="point__text" id="s19-h">Create the delivery mechanism that carries the model.</h2>
+        <ol class="point__list">
+          <li class="is-current"><span class="mono">01</span> Create the delivery mechanism that carries the model.</li>
+          <li><span class="mono">02</span> Make it accessible to users, applications, and systems.</li>
+          <li><span class="mono">03</span> Deploy anywhere from dashboards to cloud environments.</li>
+        </ol>
+        <p class="mono status">PHASE 03 :: DELIVER  //  STAGE 06 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--point" id="s20" data-slide="20" data-stage="6" data-label="STAGE 06 :: MODEL DEPLOYMENT // 02" aria-labelledby="s20-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 06 :: MODEL DEPLOYMENT</p>
+        <p class="mono slide__count">POINT 02 / 03</p>
+        <p class="point__claim">Put the model to work.</p>
+        <h2 class="point__text" id="s20-h">Make it accessible to users, applications, and systems.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Create the delivery mechanism that carries the model.</li>
+          <li class="is-current"><span class="mono">02</span> Make it accessible to users, applications, and systems.</li>
+          <li><span class="mono">03</span> Deploy anywhere from dashboards to cloud environments.</li>
+        </ol>
+        <p class="mono status">PHASE 03 :: DELIVER  //  STAGE 06 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--point" id="s21" data-slide="21" data-stage="6" data-label="STAGE 06 :: MODEL DEPLOYMENT // 03" aria-labelledby="s21-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 06 :: MODEL DEPLOYMENT</p>
+        <p class="mono slide__count">POINT 03 / 03</p>
+        <p class="point__claim">Put the model to work.</p>
+        <h2 class="point__text" id="s21-h">Deploy anywhere from dashboards to cloud environments.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Create the delivery mechanism that carries the model.</li>
+          <li><span class="mono">02</span> Make it accessible to users, applications, and systems.</li>
+          <li class="is-current"><span class="mono">03</span> Deploy anywhere from dashboards to cloud environments.</li>
+        </ol>
+        <p class="mono status">PHASE 03 :: DELIVER  //  STAGE 06 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--point" id="s22" data-slide="22" data-stage="7" data-label="STAGE 07 :: STORYTELLING &amp; COMMUNICATION // 01" aria-labelledby="s22-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 07 :: STORYTELLING &amp; COMMUNICATION</p>
+        <p class="mono slide__count">POINT 01 / 03</p>
+        <p class="point__claim">Make the insight land.</p>
+        <h2 class="point__text" id="s22-h">Present findings in simple language and visuals.</h2>
+        <ol class="point__list">
+          <li class="is-current"><span class="mono">01</span> Present findings in simple language and visuals.</li>
+          <li><span class="mono">02</span> Design for stakeholders without technical backgrounds.</li>
+          <li><span class="mono">03</span> The goal: informed decisions, not just charts.</li>
+        </ol>
+        <p class="mono status">PHASE 03 :: DELIVER  //  STAGE 07 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--point" id="s23" data-slide="23" data-stage="7" data-label="STAGE 07 :: STORYTELLING &amp; COMMUNICATION // 02" aria-labelledby="s23-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 07 :: STORYTELLING &amp; COMMUNICATION</p>
+        <p class="mono slide__count">POINT 02 / 03</p>
+        <p class="point__claim">Make the insight land.</p>
+        <h2 class="point__text" id="s23-h">Design for stakeholders without technical backgrounds.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Present findings in simple language and visuals.</li>
+          <li class="is-current"><span class="mono">02</span> Design for stakeholders without technical backgrounds.</li>
+          <li><span class="mono">03</span> The goal: informed decisions, not just charts.</li>
+        </ol>
+        <p class="mono status">PHASE 03 :: DELIVER  //  STAGE 07 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--point" id="s24" data-slide="24" data-stage="7" data-label="STAGE 07 :: STORYTELLING &amp; COMMUNICATION // 03" aria-labelledby="s24-h" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body slide__body--point">
+        <p class="mono module__label">STAGE 07 :: STORYTELLING &amp; COMMUNICATION</p>
+        <p class="mono slide__count">POINT 03 / 03</p>
+        <p class="point__claim">Make the insight land.</p>
+        <h2 class="point__text" id="s24-h">The goal: informed decisions, not just charts.</h2>
+        <ol class="point__list">
+          <li><span class="mono">01</span> Present findings in simple language and visuals.</li>
+          <li><span class="mono">02</span> Design for stakeholders without technical backgrounds.</li>
+          <li class="is-current"><span class="mono">03</span> The goal: informed decisions, not just charts.</li>
+        </ol>
+        <p class="mono status">PHASE 03 :: DELIVER  //  STAGE 07 / 07</p>
+      </div>
+    </div>
+  </section>
+  <section class="slide" id="s25" data-slide="25" data-label="SEQUENCE CHECK" aria-labelledby="sequence-title" tabindex="-1">
     <div class="slide__inner">
       <div class="slide__body">
         <header class="module__head">
           <p class="mono module__label">MODULE 02 :: SEQUENCE CHECK</p>
           <h2 id="sequence-title">Put the path in order.</h2>
-          <p class="module__intro">Tap the stages in the order the life cycle runs. A wrong tap comes back with a note.</p>
+          <p class="module__intro">The seven stages from the map. Tap them in the order the life cycle runs; a wrong tap comes back with a note.</p>
         </header>
         <div class="sequence">
           <div class="sequence__pool" data-sequence-pool></div>
@@ -290,7 +550,7 @@
     </div>
   </section>
 
-  <section class="slide" id="s12" data-slide="12" data-label="SELF-CHECK" aria-labelledby="selfcheck-title" tabindex="-1">
+  <section class="slide" id="s26" data-slide="26" data-label="SELF-CHECK" aria-labelledby="selfcheck-title" tabindex="-1">
     <div class="slide__inner">
       <div class="slide__body">
         <header class="module__head">
@@ -336,57 +596,59 @@
     </div>
   </section>
 
-  <section class="slide" id="s13" data-slide="13" data-label="HANDS-ON" aria-labelledby="handson-title" tabindex="-1">
+  <section class="slide" id="s27" data-slide="27" data-label="HANDS-ON" aria-labelledby="handson-title" tabindex="-1">
     <div class="slide__inner">
       <div class="slide__body">
         <header class="module__head">
           <p class="mono module__label">MODULE 04 :: HANDS-ON</p>
-          <h2 id="handson-title">What the workshop asks of you.</h2>
-          <p class="module__intro">Two passes over the same file. In Sheets you clean it and chart it; in Colab you filter the same rows with code. You leave with two files and one honest caveat.</p>
+          <h2 id="handson-title">Three steps over one file.</h2>
+          <p class="module__intro">The same 20-company snapshot in two tools: clean the rows and chart the yield in Sheets, then filter the same rows in Colab. You leave with two files.</p>
         </header>
-        <div class="handson">
-          <article class="handson__pass">
-            <p class="mono handson__step">PASS 01 :: SHEETS</p>
-            <h3>Clean it, keep complete rows, chart yield.</h3>
+        <ol class="handson">
+          <li class="handson__step">
+            <p class="mono handson__step-label">STEP 01 :: SHEETS</p>
+            <h3>Clean the rows.</h3>
             <ul class="points">
-              <li>One file, demo_company_metrics.csv: 20 familiar names and three metric columns (last_price, div_yield_pct, data_complete).</li>
+              <li>One file, demo_company_metrics.csv: 20 familiar names and three metric columns.</li>
               <li>Fix the formats, then keep only complete rows; 20 rows become 17.</li>
-              <li>Sort, chart yield for 5 to 7 familiar names, and write one sentence.</li>
+              <li>Missing stays missing: a blank yield is never zero.</li>
             </ul>
-          </article>
-          <article class="handson__pass">
-            <p class="mono handson__step">PASS 02 :: COLAB</p>
-            <h3>The same CSV, in code.</h3>
+          </li>
+          <li class="handson__step">
+            <p class="mono handson__step-label">STEP 02 :: SHEETS</p>
+            <h3>Chart the yield.</h3>
             <ul class="points">
-              <li>Load and peek, then count the blanks.</li>
+              <li>Sort the complete rows by yield, largest first.</li>
+              <li>Chart yield for 5 to 7 familiar names.</li>
+              <li>Write one sentence about what the chart shows.</li>
+            </ul>
+            <p class="mono handson__leaves">LEAVES :: SHEET TAB + CHART + INSIGHT</p>
+          </li>
+          <li class="handson__step">
+            <p class="mono handson__step-label">STEP 03 :: COLAB</p>
+            <h3>Filter in code.</h3>
+            <ul class="points">
+              <li>Load and peek: <code>df = pd.read_csv("demo_company_metrics.csv")</code>.</li>
               <li>Mask, then sort: keep complete rows and rank by yield.</li>
               <li>Change the rule, change the table.</li>
             </ul>
-            <p class="mono handson__code">df = pd.read_csv("demo_company_metrics.csv")</p>
-          </article>
-        </div>
-        <div class="handson__exit">
-          <p class="mono handson__step">WHAT YOU LEAVE WITH</p>
-          <ul class="points">
-            <li>[1] A cleaned sheet tab, one chart, and one insight sentence.</li>
-            <li>[2] A Colab shortlist, the rule you used, and one caveat.</li>
-          </ul>
-        </div>
+            <p class="mono handson__leaves">LEAVES :: SHORTLIST + RULE + CAVEAT</p>
+          </li>
+        </ol>
         <div class="glossary">
-          <p class="mono handson__step">FOUR WORDS</p>
+          <p class="mono handson__step-label">THREE WORDS</p>
           <dl>
             <div><dt>ticker</dt><dd>shorthand for a company.</dd></div>
             <div><dt>yield%</dt><dd>cash divided by price.</dd></div>
             <div><dt>blank</dt><dd>missing, never zero.</dd></div>
-            <div><dt>filter</dt><dd>a keep rule.</dd></div>
           </dl>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="slide" id="s14" data-slide="14" data-label="CLOSING" aria-labelledby="closing-title" tabindex="-1">
-    <div class="slide__inner slide__inner--center">
+  <section class="slide" id="s28" data-slide="28" data-label="CLOSING" aria-labelledby="closing-title" tabindex="-1">
+    <div class="slide__inner">
       <div class="slide__body module--closing">
         <header class="module__head">
           <p class="mono module__label">FINAL :: ONE QUESTION TO BRING</p>
@@ -407,7 +669,7 @@
             <span class="rule__motif"></span>
             <span class="rule__seg"></span><span class="rule__cap"></span>
           </div>
-          <p class="foot__note">The workshop covers this map, then the sheets and the Colab pass. Bring your question.</p>
+          <p class="foot__note">The workshop runs the three steps on this file, then shares out. Bring your question.</p>
           <button type="button" class="control control--quiet" data-reset>Reset progress on this device</button>
         </div>
       </div>
