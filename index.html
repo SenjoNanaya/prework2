@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DAF-A Pre-work :: The Data Science Life Cycle</title>
-<meta name="description" content="Seven stages, three phases, six minutes. Walk the life cycle map before the DAF-A session.">
+<title>UPSkill 1S2627 :: Applicant Pre-work</title>
+<meta name="description" content="Seven stages, three phases, six minutes. The applicant pre-work for the UPSkill 1S2627 workshop: walk the life cycle map, then read what the hands-on asks of you.">
 <meta name="theme-color" content="#4e4a3e">
-<meta property="og:title" content="DAF-A Pre-work :: The Data Science Life Cycle">
-<meta property="og:description" content="Seven stages, three phases, six minutes. Walk the map before the session.">
+<meta property="og:title" content="UPSkill 1S2627 :: Applicant Pre-work">
+<meta property="og:description" content="Walk the life cycle map before the workshop, then see what the hands-on asks. About six minutes, one question to bring.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/share-card.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -16,343 +16,412 @@
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<a class="skip" href="#map">Skip to the map</a>
+<a class="skip" href="#deck">Skip to the slides</a>
 
 <header class="band">
   <div class="band__inner">
-    <p class="mono band__id">SYSTEM :: DAF-A<span class="band__node" data-band-node></span></p>
+    <p class="mono band__id">SYSTEM :: UPSKILL_1S2627<span class="band__node" data-band-node></span></p>
     <div class="band__progress">
       <ol class="ticks" data-ticks aria-hidden="true">
         <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
       </ol>
-      <p class="mono band__readout"><span data-readout>00</span> / 07</p>
+      <p class="mono band__readout" aria-live="polite"><span data-readout>01</span> // 14</p>
     </div>
     <p class="mono band__org">UPLB DATA SCIENCE GUILD</p>
   </div>
 </header>
 
-<main>
-  <section class="hero" aria-labelledby="hero-title">
-    <h1 id="hero-title">The data science life cycle</h1>
-    <p class="hero__intro">Seven stages turn raw data into a decision. Walk the map before the session. It takes about six minutes, and it ends with one question you bring.</p>
-    <p class="mono hero__meta">PRE-WORK :: DAF-A :: GETTING STARTED WITH PYTHON</p>
+<main class="deck" id="deck">
+  <section class="slide slide--title is-active" id="s01" data-slide="1" data-label="TITLE" aria-label="Title" tabindex="-1">
+    <div class="slide__inner slide__inner--center">
+      <div class="hero">
+        <h1 id="hero-title">The data science life cycle</h1>
+        <p class="hero__intro">Pre-work for the UPSkill 1S2627 applicants workshop. Walk the seven stages, read what the hands-on asks of you, and bring one question. About six minutes.</p>
+        <p class="mono hero__meta">APPLICANT PRE-WORK :: SHEETS + COLAB</p>
+      </div>
+    </div>
   </section>
 
-  <div class="field-map" data-traveler-host>
-  <span class="traveler" data-traveler aria-hidden="true"></span>
-
-  <section class="brief" aria-labelledby="brief-title">
-    <div class="node node--open" data-node-wrap="0">
-      <h2 class="visually-hidden" id="brief-title">Brief</h2>
-      <div class="node__head node__head--static">
-        <span class="marker" data-marker="0" aria-hidden="true"></span>
-        <span class="mono node__num">00</span>
-        <span class="node__title">Brief</span>
-        <span class="mono node__state">2 MIN</span>
-      </div>
-      <div class="node__panel">
-        <div class="node__panel-inner">
-          <p class="question">What did you eat last night?</p>
-          <div class="choices" data-hook role="group" aria-label="Answer the warm-up question">
-            <button type="button" class="choice" data-hook-answer="0">Home-cooked</button>
-            <button type="button" class="choice" data-hook-answer="1">Takeout or delivery</button>
-            <button type="button" class="choice" data-hook-answer="2">I skipped a meal</button>
-          </div>
-          <p class="feedback" data-hook-feedback aria-live="polite"></p>
-          <div class="reveal" data-hook-reveal hidden>
-            <p>That answer is data. What you ate, when, and what it cost all left records: receipts, app orders, messages, a bank line. The session opens by asking what data you already produce without noticing.</p>
-            <p class="mono">NOTE :: THE SPEAKER ASKS THIS ONE LIVE</p>
-          </div>
-          <button type="button" class="control control--quiet" data-open-node="1">Open node 01</button>
+  <section class="slide" id="s02" data-slide="2" data-label="BRIEF" aria-labelledby="brief-title" tabindex="-1">
+    <div class="slide__inner slide__inner--center">
+      <div class="slide__body slide__body--brief">
+        <p class="mono module__label">BRIEF :: WARM-UP</p>
+        <h2 class="visually-hidden" id="brief-title">Brief</h2>
+        <p class="question">What did you eat last night?</p>
+        <div class="choices" data-hook role="group" aria-label="Answer the warm-up question">
+          <button type="button" class="choice" data-hook-answer="0">Home-cooked</button>
+          <button type="button" class="choice" data-hook-answer="1">Takeout or delivery</button>
+          <button type="button" class="choice" data-hook-answer="2">I skipped a meal</button>
+        </div>
+        <p class="feedback" data-hook-feedback aria-live="polite"></p>
+        <div class="reveal" data-hook-reveal hidden>
+          <p>That answer is data. What you ate, when, and what it cost all left records: receipts, app orders, messages, a bank line. The workshop opens by asking what data you already produce without noticing.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="map" id="map" aria-labelledby="map-title">
-    <div class="rule" aria-hidden="true">
-      <span class="rule__cap"></span><span class="rule__seg"></span>
-      <span class="rule__motif"></span>
-      <span class="rule__seg"></span><span class="rule__cap"></span>
-    </div>
-    <div class="map__head">
-      <h2 id="map-title">The map</h2>
-      <p class="map__intro">Seven stages, three phases. Open each node; the marker shows where you stand.</p>
-    </div>
+  <section class="slide" id="s03" data-slide="3" data-label="MAP" aria-labelledby="map-title" tabindex="-1">
+    <div class="slide__inner">
+      <div class="map" data-traveler-host>
+        <span class="traveler" data-traveler aria-hidden="true" hidden></span>
+        <div class="rule" aria-hidden="true">
+          <span class="rule__cap"></span><span class="rule__seg"></span>
+          <span class="rule__motif"></span>
+          <span class="rule__seg"></span><span class="rule__cap"></span>
+        </div>
+        <div class="map__head">
+          <h2 id="map-title">The map</h2>
+          <p class="map__intro">Seven stages, three phases. Choose a stage; the marker shows where you stand.</p>
+        </div>
 
-    <article class="phase" aria-labelledby="phase-1">
-      <header class="phase__head">
-        <p class="mono phase__label">PHASE 01</p>
-        <h3 id="phase-1">Define</h3>
-        <p class="phase__desc">Frame the problem, gather the data.</p>
-      </header>
-      <ol class="rail">
-        <li>
-          <div class="node" data-node-wrap="1">
-            <button type="button" class="node__head" data-node="1" aria-expanded="false" aria-controls="panel-1">
-              <span class="marker" data-marker="1" aria-hidden="true"></span>
-              <span class="mono node__num">01</span>
-              <span class="node__title">Problem understanding</span>
-              <span class="mono node__state" data-state="1">OPEN</span>
-            </button>
-            <div class="node__panel" id="panel-1">
-              <div class="node__panel-inner">
-                <p class="node__claim">Start with the problem, not the data.</p>
-                <ul class="points">
-                  <li>Understand how data science applies to the domain.</li>
-                  <li>Data scientists and domain experts frame it together.</li>
-                  <li>Weigh resources, value, risks, and ethical concerns.</li>
-                </ul>
-                <p class="mono node__deck">DECK :: SLIDE 08</p>
-                <button type="button" class="control control--quiet" data-open-node="2">Open node 02</button>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="node" data-node-wrap="2">
-            <button type="button" class="node__head" data-node="2" aria-expanded="false" aria-controls="panel-2">
-              <span class="marker" data-marker="2" aria-hidden="true"></span>
-              <span class="mono node__num">02</span>
-              <span class="node__title">Data ingestion</span>
-              <span class="mono node__state" data-state="2">OPEN</span>
-            </button>
-            <div class="node__panel" id="panel-2">
-              <div class="node__panel-inner">
-                <p class="node__claim">Collect what the problem needs.</p>
-                <ul class="points">
-                  <li>Structured data: customer records, tables, transactions.</li>
-                  <li>Unstructured data: video, images, and audio.</li>
-                  <li>Collected by manual entry, scraping, or live streams.</li>
-                </ul>
-                <p class="mono node__deck">DECK :: SLIDE 09</p>
-                <button type="button" class="control control--quiet" data-open-node="3">Open node 03</button>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ol>
-    </article>
+        <article class="phase" aria-labelledby="phase-1">
+          <header class="phase__head">
+            <p class="mono phase__label">PHASE 01</p>
+            <h3 id="phase-1">Define</h3>
+            <p class="phase__desc">Frame the problem, gather the data.</p>
+          </header>
+          <ol class="rail">
+            <li>
+              <button type="button" class="node__head" data-goto="4" data-stage="1">
+                <span class="marker" data-marker="1" aria-hidden="true"></span>
+                <span class="mono node__num">01</span>
+                <span class="node__title">Problem understanding</span>
+                <span class="mono node__state">OPEN</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="node__head" data-goto="5" data-stage="2">
+                <span class="marker" data-marker="2" aria-hidden="true"></span>
+                <span class="mono node__num">02</span>
+                <span class="node__title">Data ingestion</span>
+                <span class="mono node__state">OPEN</span>
+              </button>
+            </li>
+          </ol>
+        </article>
 
-    <article class="phase" aria-labelledby="phase-2">
-      <header class="phase__head">
-        <p class="mono phase__label">PHASE 02</p>
-        <h3 id="phase-2">Build</h3>
-        <p class="phase__desc">Prepare, analyze, model.</p>
-      </header>
-      <ol class="rail">
-        <li>
-          <div class="node" data-node-wrap="3">
-            <button type="button" class="node__head" data-node="3" aria-expanded="false" aria-controls="panel-3">
-              <span class="marker" data-marker="3" aria-hidden="true"></span>
-              <span class="mono node__num">03</span>
-              <span class="node__title">Data storage &amp; processing</span>
-              <span class="mono node__state" data-state="3">OPEN</span>
-            </button>
-            <div class="node__panel" id="panel-3">
-              <div class="node__panel-inner">
-                <p class="node__claim">Clean it before you store it.</p>
-                <ul class="points">
-                  <li>Set standards for storing and structuring data.</li>
-                  <li>Clean and transform with ETL: extract, transform, load.</li>
-                  <li>Data preparation ensures quality before storage.</li>
-                </ul>
-                <p class="mono node__deck">DECK :: SLIDE 10</p>
-                <button type="button" class="control control--quiet" data-open-node="4">Open node 04</button>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="node" data-node-wrap="4">
-            <button type="button" class="node__head" data-node="4" aria-expanded="false" aria-controls="panel-4">
-              <span class="marker" data-marker="4" aria-hidden="true"></span>
-              <span class="mono node__num">04</span>
-              <span class="node__title">Data analysis</span>
-              <span class="mono node__state" data-state="4">OPEN</span>
-            </button>
-            <div class="node__panel" id="panel-4">
-              <div class="node__panel-inner">
-                <p class="node__claim">Let the data speak.</p>
-                <ul class="points">
-                  <li>Apply machine learning algorithms and statistical models.</li>
-                  <li>Predict, classify, and reveal hidden patterns.</li>
-                  <li>Insights must serve the goal of the project.</li>
-                </ul>
-                <p class="mono node__deck">DECK :: SLIDE 11</p>
-                <button type="button" class="control control--quiet" data-open-node="5">Open node 05</button>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="node" data-node-wrap="5">
-            <button type="button" class="node__head" data-node="5" aria-expanded="false" aria-controls="panel-5">
-              <span class="marker" data-marker="5" aria-hidden="true"></span>
-              <span class="mono node__num">05</span>
-              <span class="node__title">Data modeling</span>
-              <span class="mono node__state" data-state="5">OPEN</span>
-            </button>
-            <div class="node__panel" id="panel-5">
-              <div class="node__panel-inner">
-                <p class="node__claim">Choose the model that fits.</p>
-                <ul class="points">
-                  <li>Select a model type that matches the problem.</li>
-                  <li>Choose algorithms that extract insight effectively.</li>
-                  <li>Prevent overfitting: perform on train and test data.</li>
-                </ul>
-                <p class="mono node__deck">DECK :: SLIDE 12</p>
-                <button type="button" class="control control--quiet" data-open-node="6">Open node 06</button>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ol>
-    </article>
+        <article class="phase" aria-labelledby="phase-2">
+          <header class="phase__head">
+            <p class="mono phase__label">PHASE 02</p>
+            <h3 id="phase-2">Build</h3>
+            <p class="phase__desc">Prepare, analyze, model.</p>
+          </header>
+          <ol class="rail">
+            <li>
+              <button type="button" class="node__head" data-goto="6" data-stage="3">
+                <span class="marker" data-marker="3" aria-hidden="true"></span>
+                <span class="mono node__num">03</span>
+                <span class="node__title">Data storage &amp; processing</span>
+                <span class="mono node__state">OPEN</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="node__head" data-goto="7" data-stage="4">
+                <span class="marker" data-marker="4" aria-hidden="true"></span>
+                <span class="mono node__num">04</span>
+                <span class="node__title">Data analysis</span>
+                <span class="mono node__state">OPEN</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="node__head" data-goto="8" data-stage="5">
+                <span class="marker" data-marker="5" aria-hidden="true"></span>
+                <span class="mono node__num">05</span>
+                <span class="node__title">Data modeling</span>
+                <span class="mono node__state">OPEN</span>
+              </button>
+            </li>
+          </ol>
+        </article>
 
-    <article class="phase" aria-labelledby="phase-3">
-      <header class="phase__head">
-        <p class="mono phase__label">PHASE 03</p>
-        <h3 id="phase-3">Deliver</h3>
-        <p class="phase__desc">Deploy the model, tell the story.</p>
-      </header>
-      <ol class="rail">
-        <li>
-          <div class="node" data-node-wrap="6">
-            <button type="button" class="node__head" data-node="6" aria-expanded="false" aria-controls="panel-6">
-              <span class="marker" data-marker="6" aria-hidden="true"></span>
-              <span class="mono node__num">06</span>
-              <span class="node__title">Model deployment</span>
-              <span class="mono node__state" data-state="6">OPEN</span>
-            </button>
-            <div class="node__panel" id="panel-6">
-              <div class="node__panel-inner">
-                <p class="node__claim">Put the model to work.</p>
-                <ul class="points">
-                  <li>Create the delivery mechanism that carries the model.</li>
-                  <li>Make it accessible to users, applications, and systems.</li>
-                  <li>Deploy anywhere from dashboards to cloud environments.</li>
-                </ul>
-                <p class="mono node__deck">DECK :: SLIDE 13</p>
-                <button type="button" class="control control--quiet" data-open-node="7">Open node 07</button>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="node" data-node-wrap="7">
-            <button type="button" class="node__head" data-node="7" aria-expanded="false" aria-controls="panel-7">
-              <span class="marker" data-marker="7" aria-hidden="true"></span>
-              <span class="mono node__num">07</span>
-              <span class="node__title">Storytelling &amp; communication</span>
-              <span class="mono node__state" data-state="7">OPEN</span>
-            </button>
-            <div class="node__panel" id="panel-7">
-              <div class="node__panel-inner">
-                <p class="node__claim">Make the insight land.</p>
-                <ul class="points">
-                  <li>Present findings in simple language and visuals.</li>
-                  <li>Design for stakeholders without technical backgrounds.</li>
-                  <li>The goal: informed decisions, not just charts.</li>
-                </ul>
-                <p class="mono node__deck">DECK :: SLIDE 14</p>
-                <button type="button" class="control control--quiet" data-jump="sequence">Go to the sequence check</button>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ol>
-    </article>
-  </section>
-  </div>
-
-  <section class="module" id="sequence" aria-labelledby="sequence-title">
-    <header class="module__head">
-      <p class="mono module__label">MODULE 02 :: SEQUENCE CHECK</p>
-      <h2 id="sequence-title">Put the path in order.</h2>
-      <p class="module__intro">Tap the stages in the order the life cycle runs. A wrong tap comes back with a note.</p>
-    </header>
-    <div class="sequence">
-      <div class="sequence__pool" data-sequence-pool></div>
-      <ol class="sequence__trace" data-sequence-trace aria-label="Your sequence"></ol>
-    </div>
-    <p class="feedback" data-sequence-feedback aria-live="polite"></p>
-    <div class="module__foot">
-      <p class="mono sequence__readout"><span data-sequence-count>0</span> / 07 PLACED</p>
-      <button type="button" class="control" data-sequence-reset>Reset the check</button>
+        <article class="phase" aria-labelledby="phase-3">
+          <header class="phase__head">
+            <p class="mono phase__label">PHASE 03</p>
+            <h3 id="phase-3">Deliver</h3>
+            <p class="phase__desc">Deploy the model, tell the story.</p>
+          </header>
+          <ol class="rail">
+            <li>
+              <button type="button" class="node__head" data-goto="9" data-stage="6">
+                <span class="marker" data-marker="6" aria-hidden="true"></span>
+                <span class="mono node__num">06</span>
+                <span class="node__title">Model deployment</span>
+                <span class="mono node__state">OPEN</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="node__head" data-goto="10" data-stage="7">
+                <span class="marker" data-marker="7" aria-hidden="true"></span>
+                <span class="mono node__num">07</span>
+                <span class="node__title">Storytelling &amp; communication</span>
+                <span class="mono node__state">OPEN</span>
+              </button>
+            </li>
+          </ol>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section class="module" id="selfcheck" aria-labelledby="selfcheck-title">
-    <header class="module__head">
-      <p class="mono module__label">MODULE 03 :: SELF-CHECK</p>
-      <h2 id="selfcheck-title">Three questions before the session.</h2>
-      <p class="module__intro">Answer from memory. Each answer gets a note either way.</p>
-    </header>
-
-    <div class="quiz">
-      <fieldset class="quiz__item" data-quiz="0">
-        <legend class="quiz__q"><span class="mono">Q1</span> Which stage comes first?</legend>
-        <div class="quiz__options">
-          <button type="button" class="choice" data-quiz-answer="0">Data analysis</button>
-          <button type="button" class="choice" data-quiz-answer="1">Problem understanding</button>
-          <button type="button" class="choice" data-quiz-answer="2">Model deployment</button>
-        </div>
-        <p class="feedback" aria-live="polite"></p>
-      </fieldset>
-      <fieldset class="quiz__item" data-quiz="1">
-        <legend class="quiz__q"><span class="mono">Q2</span> ETL stands for what?</legend>
-        <div class="quiz__options">
-          <button type="button" class="choice" data-quiz-answer="0">Evaluate, test, learn</button>
-          <button type="button" class="choice" data-quiz-answer="1">Encode, transfer, link</button>
-          <button type="button" class="choice" data-quiz-answer="2">Extract, transform, load</button>
-        </div>
-        <p class="feedback" aria-live="polite"></p>
-      </fieldset>
-      <fieldset class="quiz__item" data-quiz="2">
-        <legend class="quiz__q"><span class="mono">Q3</span> A model scores well on training data and poorly on new data. What is that?</legend>
-        <div class="quiz__options">
-          <button type="button" class="choice" data-quiz-answer="0">Overfitting</button>
-          <button type="button" class="choice" data-quiz-answer="1">Underfitting</button>
-          <button type="button" class="choice" data-quiz-answer="2">Deployment drift</button>
-        </div>
-        <p class="feedback" aria-live="polite"></p>
-      </fieldset>
-    </div>
-
-    <div class="readout" data-quiz-readout hidden>
-      <p class="mono readout__label">SYSTEM READINESS</p>
-      <p class="readout__score"><span data-quiz-score>0</span> / 3</p>
-      <p class="readout__note" data-quiz-note></p>
+  <section class="slide slide--stage" id="s04" data-slide="4" data-stage="1" data-label="STAGE 01 :: PROBLEM UNDERSTANDING" aria-labelledby="stage-1-title" tabindex="-1">
+    <div class="slide__inner slide__inner--center">
+      <div class="slide__body slide__body--stage">
+        <p class="mono module__label">PHASE 01 :: DEFINE</p>
+        <h2 class="stage__claim" id="stage-1-title">Start with the problem, not the data.</h2>
+        <ul class="points">
+          <li>Understand how data science applies to the domain.</li>
+          <li>Data scientists and domain experts frame it together.</li>
+          <li>Weigh resources, value, risks, and ethical concerns.</li>
+        </ul>
+        <p class="mono status">STAGE 01 / 07</p>
+      </div>
     </div>
   </section>
 
-  <section class="module module--closing" id="closing" aria-labelledby="closing-title">
-    <header class="module__head">
-      <p class="mono module__label">FINAL :: ONE QUESTION TO BRING</p>
-      <h2 id="closing-title">What do you want answered?</h2>
-      <p class="module__intro">Write one question about data science for the session. It stays in this browser, and you can copy it into the chat.</p>
-    </header>
-    <label class="visually-hidden" for="question-field">Your question</label>
-    <textarea id="question-field" class="field" rows="3" maxlength="280" placeholder="e.g. How much math does the Python part actually need?"></textarea>
-    <div class="module__foot">
-      <button type="button" class="control control--primary" data-question-save>Save the question</button>
-      <button type="button" class="control" data-question-copy>Copy</button>
-      <p class="mono status" data-question-status aria-live="polite"></p>
+  <section class="slide slide--stage" id="s05" data-slide="5" data-stage="2" data-label="STAGE 02 :: DATA INGESTION" aria-labelledby="stage-2-title" tabindex="-1">
+    <div class="slide__inner slide__inner--center">
+      <div class="slide__body slide__body--stage">
+        <p class="mono module__label">PHASE 01 :: DEFINE</p>
+        <h2 class="stage__claim" id="stage-2-title">Collect what the problem needs.</h2>
+        <ul class="points">
+          <li>Structured data: customer records, tables, transactions.</li>
+          <li>Unstructured data: video, images, and audio.</li>
+          <li>Collected by manual entry, scraping, or live streams.</li>
+        </ul>
+        <p class="mono status">STAGE 02 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--stage" id="s06" data-slide="6" data-stage="3" data-label="STAGE 03 :: DATA STORAGE &amp; PROCESSING" aria-labelledby="stage-3-title" tabindex="-1">
+    <div class="slide__inner slide__inner--center">
+      <div class="slide__body slide__body--stage">
+        <p class="mono module__label">PHASE 02 :: BUILD</p>
+        <h2 class="stage__claim" id="stage-3-title">Clean it before you store it.</h2>
+        <ul class="points">
+          <li>Set standards for storing and structuring data.</li>
+          <li>Clean and transform with ETL: extract, transform, load.</li>
+          <li>Data preparation ensures quality before storage.</li>
+        </ul>
+        <p class="mono status">STAGE 03 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--stage" id="s07" data-slide="7" data-stage="4" data-label="STAGE 04 :: DATA ANALYSIS" aria-labelledby="stage-4-title" tabindex="-1">
+    <div class="slide__inner slide__inner--center">
+      <div class="slide__body slide__body--stage">
+        <p class="mono module__label">PHASE 02 :: BUILD</p>
+        <h2 class="stage__claim" id="stage-4-title">Let the data speak.</h2>
+        <ul class="points">
+          <li>Apply machine learning algorithms and statistical models.</li>
+          <li>Predict, classify, and reveal hidden patterns.</li>
+          <li>Insights must serve the goal of the project.</li>
+        </ul>
+        <p class="mono status">STAGE 04 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--stage" id="s08" data-slide="8" data-stage="5" data-label="STAGE 05 :: DATA MODELING" aria-labelledby="stage-5-title" tabindex="-1">
+    <div class="slide__inner slide__inner--center">
+      <div class="slide__body slide__body--stage">
+        <p class="mono module__label">PHASE 02 :: BUILD</p>
+        <h2 class="stage__claim" id="stage-5-title">Choose the model that fits.</h2>
+        <ul class="points">
+          <li>Select a model type that matches the problem.</li>
+          <li>Choose algorithms that extract insight effectively.</li>
+          <li>Prevent overfitting: perform on train and test data.</li>
+        </ul>
+        <p class="mono status">STAGE 05 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--stage" id="s09" data-slide="9" data-stage="6" data-label="STAGE 06 :: MODEL DEPLOYMENT" aria-labelledby="stage-6-title" tabindex="-1">
+    <div class="slide__inner slide__inner--center">
+      <div class="slide__body slide__body--stage">
+        <p class="mono module__label">PHASE 03 :: DELIVER</p>
+        <h2 class="stage__claim" id="stage-6-title">Put the model to work.</h2>
+        <ul class="points">
+          <li>Create the delivery mechanism that carries the model.</li>
+          <li>Make it accessible to users, applications, and systems.</li>
+          <li>Deploy anywhere from dashboards to cloud environments.</li>
+        </ul>
+        <p class="mono status">STAGE 06 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--stage" id="s10" data-slide="10" data-stage="7" data-label="STAGE 07 :: STORYTELLING &amp; COMMUNICATION" aria-labelledby="stage-7-title" tabindex="-1">
+    <div class="slide__inner slide__inner--center">
+      <div class="slide__body slide__body--stage">
+        <p class="mono module__label">PHASE 03 :: DELIVER</p>
+        <h2 class="stage__claim" id="stage-7-title">Make the insight land.</h2>
+        <ul class="points">
+          <li>Present findings in simple language and visuals.</li>
+          <li>Design for stakeholders without technical backgrounds.</li>
+          <li>The goal: informed decisions, not just charts.</li>
+        </ul>
+        <p class="mono status">STAGE 07 / 07</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="s11" data-slide="11" data-label="SEQUENCE CHECK" aria-labelledby="sequence-title" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body">
+        <header class="module__head">
+          <p class="mono module__label">MODULE 02 :: SEQUENCE CHECK</p>
+          <h2 id="sequence-title">Put the path in order.</h2>
+          <p class="module__intro">Tap the stages in the order the life cycle runs. A wrong tap comes back with a note.</p>
+        </header>
+        <div class="sequence">
+          <div class="sequence__pool" data-sequence-pool></div>
+          <ol class="sequence__trace" data-sequence-trace aria-label="Your sequence"></ol>
+        </div>
+        <p class="feedback" data-sequence-feedback aria-live="polite"></p>
+        <div class="module__foot">
+          <p class="mono sequence__readout"><span data-sequence-count>0</span> / 07 PLACED</p>
+          <button type="button" class="control" data-sequence-reset>Reset the check</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="s12" data-slide="12" data-label="SELF-CHECK" aria-labelledby="selfcheck-title" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body">
+        <header class="module__head">
+          <p class="mono module__label">MODULE 03 :: SELF-CHECK</p>
+          <h2 id="selfcheck-title">Three questions before the workshop.</h2>
+          <p class="module__intro">Answer from memory. Each answer gets a note either way.</p>
+        </header>
+        <div class="quiz">
+          <fieldset class="quiz__item" data-quiz="0">
+            <legend class="quiz__q"><span class="mono">Q1</span> Which stage comes first?</legend>
+            <div class="quiz__options">
+              <button type="button" class="choice" data-quiz-answer="0">Data analysis</button>
+              <button type="button" class="choice" data-quiz-answer="1">Problem understanding</button>
+              <button type="button" class="choice" data-quiz-answer="2">Model deployment</button>
+            </div>
+            <p class="feedback" aria-live="polite"></p>
+          </fieldset>
+          <fieldset class="quiz__item" data-quiz="1">
+            <legend class="quiz__q"><span class="mono">Q2</span> ETL stands for what?</legend>
+            <div class="quiz__options">
+              <button type="button" class="choice" data-quiz-answer="0">Evaluate, test, learn</button>
+              <button type="button" class="choice" data-quiz-answer="1">Encode, transfer, link</button>
+              <button type="button" class="choice" data-quiz-answer="2">Extract, transform, load</button>
+            </div>
+            <p class="feedback" aria-live="polite"></p>
+          </fieldset>
+          <fieldset class="quiz__item" data-quiz="2">
+            <legend class="quiz__q"><span class="mono">Q3</span> A model scores well on training data and poorly on new data. What is that?</legend>
+            <div class="quiz__options">
+              <button type="button" class="choice" data-quiz-answer="0">Overfitting</button>
+              <button type="button" class="choice" data-quiz-answer="1">Underfitting</button>
+              <button type="button" class="choice" data-quiz-answer="2">Deployment drift</button>
+            </div>
+            <p class="feedback" aria-live="polite"></p>
+          </fieldset>
+        </div>
+        <div class="readout" data-quiz-readout hidden>
+          <p class="mono readout__label">SYSTEM READINESS</p>
+          <p class="readout__score"><span data-quiz-score>0</span> / 3</p>
+          <p class="readout__note" data-quiz-note></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="s13" data-slide="13" data-label="HANDS-ON" aria-labelledby="handson-title" tabindex="-1">
+    <div class="slide__inner">
+      <div class="slide__body">
+        <header class="module__head">
+          <p class="mono module__label">MODULE 04 :: HANDS-ON</p>
+          <h2 id="handson-title">What the workshop asks of you.</h2>
+          <p class="module__intro">Two passes over the same file. In Sheets you clean it and chart it; in Colab you filter the same rows with code. You leave with two files and one honest caveat.</p>
+        </header>
+        <div class="handson">
+          <article class="handson__pass">
+            <p class="mono handson__step">PASS 01 :: SHEETS</p>
+            <h3>Clean it, keep complete rows, chart yield.</h3>
+            <ul class="points">
+              <li>One file, demo_company_metrics.csv: 20 familiar names and three metric columns (last_price, div_yield_pct, data_complete).</li>
+              <li>Fix the formats, then keep only complete rows; 20 rows become 17.</li>
+              <li>Sort, chart yield for 5 to 7 familiar names, and write one sentence.</li>
+            </ul>
+          </article>
+          <article class="handson__pass">
+            <p class="mono handson__step">PASS 02 :: COLAB</p>
+            <h3>The same CSV, in code.</h3>
+            <ul class="points">
+              <li>Load and peek, then count the blanks.</li>
+              <li>Mask, then sort: keep complete rows and rank by yield.</li>
+              <li>Change the rule, change the table.</li>
+            </ul>
+            <p class="mono handson__code">df = pd.read_csv("demo_company_metrics.csv")</p>
+          </article>
+        </div>
+        <div class="handson__exit">
+          <p class="mono handson__step">WHAT YOU LEAVE WITH</p>
+          <ul class="points">
+            <li>[1] A cleaned sheet tab, one chart, and one insight sentence.</li>
+            <li>[2] A Colab shortlist, the rule you used, and one caveat.</li>
+          </ul>
+        </div>
+        <div class="glossary">
+          <p class="mono handson__step">FOUR WORDS</p>
+          <dl>
+            <div><dt>ticker</dt><dd>shorthand for a company.</dd></div>
+            <div><dt>yield%</dt><dd>cash divided by price.</dd></div>
+            <div><dt>blank</dt><dd>missing, never zero.</dd></div>
+            <div><dt>filter</dt><dd>a keep rule.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="s14" data-slide="14" data-label="CLOSING" aria-labelledby="closing-title" tabindex="-1">
+    <div class="slide__inner slide__inner--center">
+      <div class="slide__body module--closing">
+        <header class="module__head">
+          <p class="mono module__label">FINAL :: ONE QUESTION TO BRING</p>
+          <h2 id="closing-title">What do you want answered?</h2>
+          <p class="module__intro">Write one question about the data work for the workshop. It stays in this browser, and you can copy it into the chat.</p>
+        </header>
+        <p class="mono closing__bring">BRING :: GOOGLE ACCOUNT FOR COLAB  //  SHEETS OPEN  //  YOUR QUESTION</p>
+        <label class="visually-hidden" for="question-field">Your question</label>
+        <textarea id="question-field" class="field" rows="3" maxlength="280" placeholder="e.g. How much math does the Python part actually need?"></textarea>
+        <div class="module__foot">
+          <button type="button" class="control control--primary" data-question-save>Save the question</button>
+          <button type="button" class="control" data-question-copy>Copy</button>
+          <p class="mono status" data-question-status aria-live="polite"></p>
+        </div>
+        <div class="closing__foot">
+          <div class="rule" aria-hidden="true">
+            <span class="rule__cap"></span><span class="rule__seg"></span>
+            <span class="rule__motif"></span>
+            <span class="rule__seg"></span><span class="rule__cap"></span>
+          </div>
+          <p class="foot__note">The workshop covers this map, then the sheets and the Colab pass. Bring your question.</p>
+          <button type="button" class="control control--quiet" data-reset>Reset progress on this device</button>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
-<footer class="foot">
-  <div class="rule" aria-hidden="true">
-    <span class="rule__cap"></span><span class="rule__seg"></span>
-    <span class="rule__motif"></span>
-    <span class="rule__seg"></span><span class="rule__cap"></span>
+<nav class="nav" aria-label="Slide navigation">
+  <p class="mono nav__label">UPLB DATA SCIENCE GUILD :: UPSKILL 1S2627</p>
+  <div class="nav__controls">
+    <button type="button" class="control" data-prev>Prev</button>
+    <button type="button" class="control" data-next>Next</button>
   </div>
-  <p class="mono foot__line">UPLB DATA SCIENCE GUILD :: DAF-A PRE-WORK</p>
-  <p class="foot__note">The session covers this map, then the Python that works it. Bring your question.</p>
-  <button type="button" class="control control--quiet" data-reset>Reset progress on this device</button>
-</footer>
+</nav>
 
 <script src="assets/app.js" defer></script>
 </body>

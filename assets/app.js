@@ -1,9 +1,10 @@
-const KEY = "dafa.prework.v1";
+const KEY = "upskill.prework.v1";
 const STAGE_COUNT = 7;
 
 const defaults = {
+  slide: 0,
+  stage: 0,
   visited: [],
-  current: null,
   hook: null,
   sequence: [],
   quiz: [null, null, null],
@@ -45,7 +46,19 @@ const QUIZ = [
 
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+const slides = Array.from(document.querySelectorAll("[data-slide]"));
+const deck = document.getElementById("deck");
+const mapSlide = document.getElementById("s03");
+const traveler = document.querySelector("[data-traveler]");
+const readout = document.querySelector("[data-readout]");
+const bandNode = document.querySelector("[data-band-node]");
+const ticks = document.querySelectorAll("[data-ticks] li");
+const prevBtn = document.querySelector("[data-prev]");
+const nextBtn = document.querySelector("[data-next]");
+
 let state = load();
+let index = 0;
+let travelerStage = 0;
 let travelTimer;
 
 function load() {
@@ -74,39 +87,41 @@ function clockTime() {
   return `${pad(d.getHours())}:${pad(d.getMinutes())}`;
 }
 
-function scrollToNode(head) {
-  const box = head.getBoundingClientRect();
-  const top = window.scrollY + box.top - 70;
-  window.scrollTo({ top, behavior: reduced ? "auto" : "smooth" });
-}
-
 function band() {
-  const readout = document.querySelector("[data-readout]");
-  const ticks = document.querySelectorAll("[data-ticks] li");
-  const count = state.visited.length;
-  readout.textContent = pad(count);
+  readout.textContent = pad(index + 1);
+  const label = slides[index] ? slides[index].dataset.label || "" : "";
+  bandNode.textContent = label ? `  //  ${label}` : "";
   ticks.forEach((tick, i) => {
     tick.classList.toggle("is-on", state.visited.includes(i + 1));
   });
-  const label = document.querySelector("[data-band-node]");
-  if (label) {
-    const id = state.current;
-    label.textContent =
-      id === null ? "" : `  //  ${pad(id)} :: ${STAGES.find((s) => s.n === id).name.toUpperCase()}`;
-  }
+  prevBtn.disabled = index === 0;
+  nextBtn.disabled = index === slides.length - 1;
 }
 
-function placeTraveler(animate) {
-  const host = document.querySelector("[data-traveler-host]");
-  const traveler = document.querySelector("[data-traveler]");
-  if (!host || !traveler) {
+function renderMap() {
+  document.querySelectorAll("[data-goto][data-stage]").forEach((btn) => {
+    const n = Number(btn.dataset.stage);
+    btn.classList.toggle("is-visited", state.visited.includes(n));
+    btn.classList.toggle("is-current", state.stage === n);
+  });
+}
+
+function placeTraveler(animate, stageOverride) {
+  if (!traveler || !mapSlide) {
     return;
   }
-  const id = state.current === null ? 0 : state.current;
-  const slot = document.querySelector(`[data-marker="${id}"]`);
-  if (!slot) {
+  const id = stageOverride === undefined ? state.stage : stageOverride;
+  if (!id || !mapSlide.classList.contains("is-active")) {
+    traveler.hidden = true;
     return;
   }
+  const slot = mapSlide.querySelector(`[data-marker="${id}"]`);
+  const host = mapSlide.querySelector(".map");
+  if (!slot || !host) {
+    traveler.hidden = true;
+    return;
+  }
+  traveler.hidden = false;
   const hostBox = host.getBoundingClientRect();
   const slotBox = slot.getBoundingClientRect();
   const size = traveler.offsetWidth || 28;
@@ -119,80 +134,160 @@ function placeTraveler(animate) {
   if (!animate) {
     requestAnimationFrame(() => traveler.classList.remove("is-snap"));
   }
+  travelerStage = id;
 }
 
-function setNodeState(wrap) {
-  const id = Number(wrap.dataset.nodeWrap);
-  const head = wrap.querySelector("[data-node]");
-  const label = wrap.querySelector("[data-state]");
-  const isOpen = state.current === id && id !== 0;
-  const isCurrent = id === 0 ? state.current === null : state.current === id;
-  wrap.classList.toggle("is-open", id === 0 || isOpen);
-  wrap.classList.toggle("is-visited", id !== 0 && state.visited.includes(id));
-  wrap.classList.toggle("is-current", isCurrent);
-  if (head) {
-    head.setAttribute("aria-expanded", String(isOpen));
-    label.textContent = isOpen ? "CLOSE" : "OPEN";
+function enterMap() {
+  if (!traveler) {
+    return;
   }
-}
-
-function renderNodes() {
-  document.querySelectorAll("[data-node-wrap]").forEach(setNodeState);
-}
-
-function travelTo() {
-  placeTraveler(true);
-  window.clearTimeout(travelTimer);
-  travelTimer = window.setTimeout(() => placeTraveler(true), 460);
-}
-
-function openNode(id, scroll) {
-  state.current = id;
-  if (!state.visited.includes(id)) {
-    state.visited.push(id);
+  if (!state.stage) {
+    traveler.hidden = true;
+    return;
   }
-  save();
-  renderNodes();
-  band();
-  travelTo();
-  if (scroll) {
-    const head = document.querySelector(`[data-node="${id}"]`);
-    if (head) {
-      scrollToNode(head);
+  if (travelerStage && travelerStage !== state.stage) {
+    placeTraveler(false, travelerStage);
+    requestAnimationFrame(() => placeTraveler(true));
+    return;
+  }
+  placeTraveler(false);
+}
+
+function goTo(n, opts = {}) {
+  const next = Math.max(0, Math.min(slides.length - 1, n));
+  index = next;
+  const slide = slides[next];
+
+  slides.forEach((s, i) => {
+    const active = i === next;
+    s.classList.toggle("is-active", active);
+    if (active) {
+      s.removeAttribute("inert");
+      s.removeAttribute("aria-hidden");
+    } else {
+      s.setAttribute("inert", "");
+      s.setAttribute("aria-hidden", "true");
+    }
+  });
+
+  const inner = slide.querySelector(".slide__inner");
+  if (inner) {
+    inner.scrollTop = 0;
+  }
+
+  const stage = Number(slide.dataset.stage || 0);
+  if (stage) {
+    state.stage = stage;
+    if (!state.visited.includes(stage)) {
+      state.visited.push(stage);
     }
   }
+  state.slide = next;
+  save();
+
+  band();
+  renderMap();
+
+  if (slide === mapSlide) {
+    enterMap();
+  } else if (traveler) {
+    traveler.hidden = true;
+  }
+
+  history.replaceState(null, "", `#${slide.id}`);
+
+  if (opts.focus !== false) {
+    slide.focus({ preventScroll: true });
+  }
 }
 
-function bindNodes() {
-  document.querySelectorAll("[data-node]").forEach((head) => {
-    head.addEventListener("click", () => {
-      const id = Number(head.dataset.node);
-      if (state.current === id) {
-        state.current = null;
-        save();
-        renderNodes();
-        band();
-        travelTo();
+function bindDeck() {
+  prevBtn.addEventListener("click", () => goTo(index - 1));
+  nextBtn.addEventListener("click", () => goTo(index + 1));
+
+  document.querySelectorAll("[data-goto]").forEach((btn) => {
+    btn.addEventListener("click", () => goTo(Number(btn.dataset.goto) - 1));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) {
+      return;
+    }
+    const target = event.target;
+    if (target && target.closest && target.closest("button, a, textarea, input, select")) {
+      return;
+    }
+    switch (event.key) {
+      case "ArrowRight":
+      case "ArrowDown":
+      case "PageDown":
+      case " ":
+        event.preventDefault();
+        goTo(index + 1);
+        break;
+      case "ArrowLeft":
+      case "ArrowUp":
+      case "PageUp":
+        event.preventDefault();
+        goTo(index - 1);
+        break;
+      case "Home":
+        event.preventDefault();
+        goTo(0);
+        break;
+      case "End":
+        event.preventDefault();
+        goTo(slides.length - 1);
+        break;
+      default:
+        break;
+    }
+  });
+
+  let touchX = 0;
+  let touchY = 0;
+  deck.addEventListener(
+    "touchstart",
+    (event) => {
+      const touch = event.changedTouches[0];
+      touchX = touch.clientX;
+      touchY = touch.clientY;
+    },
+    { passive: true }
+  );
+  deck.addEventListener(
+    "touchend",
+    (event) => {
+      const touch = event.changedTouches[0];
+      const dx = touch.clientX - touchX;
+      const dy = touch.clientY - touchY;
+      if (event.target.closest && event.target.closest(".handson__code, textarea")) {
         return;
       }
-      openNode(id, false);
-      const wrap = head.closest("[data-node-wrap]");
-      wrap.scrollIntoView({ block: "nearest", behavior: reduced ? "auto" : "smooth" });
-    });
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        goTo(index + (dx < 0 ? 1 : -1));
+      }
+    },
+    { passive: true }
+  );
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(() => {
+      if (mapSlide.classList.contains("is-active")) {
+        placeTraveler(false);
+      }
+    }, 120);
   });
 
-  document.querySelectorAll("[data-open-node]").forEach((btn) => {
-    btn.addEventListener("click", () => openNode(Number(btn.dataset.openNode), true));
-  });
-
-  document.querySelectorAll("[data-jump]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const target = document.getElementById(btn.dataset.jump);
-      if (target) {
-        target.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => {
+      if (mapSlide.classList.contains("is-active")) {
+        placeTraveler(false);
       }
     });
-  });
+  }
 }
 
 function hook() {
@@ -250,14 +345,14 @@ function sequence() {
     const expected = state.sequence.length + 1;
     const stage = STAGES.find((s) => s.n === n);
     if (n === expected) {
-      const index = [...pool.querySelectorAll("[data-stage]")].findIndex(
+      const slotIndex = [...pool.querySelectorAll("[data-stage]")].findIndex(
         (chip) => Number(chip.dataset.stage) === n
       );
       state.sequence.push(n);
       save();
       render();
       const chips = pool.querySelectorAll("[data-stage]");
-      const next = chips[Math.min(index, chips.length - 1)];
+      const next = chips[Math.min(slotIndex, chips.length - 1)];
       if (next) {
         next.focus();
       } else {
@@ -318,18 +413,18 @@ function sequence() {
 
 function quiz() {
   const items = document.querySelectorAll("[data-quiz]");
-  const readout = document.querySelector("[data-quiz-readout]");
+  const readoutBox = document.querySelector("[data-quiz-readout]");
   const score = document.querySelector("[data-quiz-score]");
   const note = document.querySelector("[data-quiz-note]");
 
-  function renderItem(item, index) {
+  function renderItem(item, i) {
     const buttons = item.querySelectorAll("[data-quiz-answer]");
     const feedback = item.querySelector(".feedback");
-    const answer = state.quiz[index];
+    const answer = state.quiz[i];
     if (answer === null) {
       return;
     }
-    const correct = QUIZ[index].correct;
+    const correct = QUIZ[i].correct;
     buttons.forEach((btn) => {
       const value = Number(btn.dataset.quizAnswer);
       btn.disabled = true;
@@ -339,38 +434,38 @@ function quiz() {
     });
     const hit = answer === correct;
     feedback.classList.toggle("is-ok", hit);
-    feedback.textContent = hit ? `Correct. ${QUIZ[index].note}` : `Not quite. ${QUIZ[index].note}`;
+    feedback.textContent = hit ? `Correct. ${QUIZ[i].note}` : `Not quite. ${QUIZ[i].note}`;
   }
 
   function renderReadout() {
     if (state.quiz.some((a) => a === null)) {
-      readout.hidden = true;
+      readoutBox.hidden = true;
       return;
     }
     const hits = state.quiz.filter((a, i) => a === QUIZ[i].correct).length;
     score.textContent = String(hits);
     note.textContent =
       hits === 3
-        ? "Ready. You know the map; the session adds the Python."
+        ? "Ready. You know the map; the workshop adds the sheets and the Colab pass."
         : hits === 2
-          ? "Close. Reread the node you missed; it takes a minute."
-          : "Worth another pass. Open the map again before the session.";
-    readout.hidden = false;
+          ? "Close. Reread the stage you missed; it takes a minute."
+          : "Worth another pass. Walk the map again before the workshop.";
+    readoutBox.hidden = false;
   }
 
-  items.forEach((item, index) => {
+  items.forEach((item, i) => {
     item.querySelectorAll("[data-quiz-answer]").forEach((btn) => {
       btn.addEventListener("click", () => {
-        if (state.quiz[index] !== null) {
+        if (state.quiz[i] !== null) {
           return;
         }
-        state.quiz[index] = Number(btn.dataset.quizAnswer);
+        state.quiz[i] = Number(btn.dataset.quizAnswer);
         save();
-        renderItem(item, index);
+        renderItem(item, i);
         renderReadout();
       });
     });
-    renderItem(item, index);
+    renderItem(item, i);
   });
 
   renderReadout();
@@ -418,21 +513,17 @@ function closing() {
   });
 }
 
-renderNodes();
-bindNodes();
-hook();
-sequence();
-quiz();
-closing();
-band();
-placeTraveler(false);
+function init() {
+  const hash = window.location.hash.match(/^#(s\d+)$/);
+  const hashIndex = hash ? slides.findIndex((s) => s.id === hash[1]) : -1;
+  const start = hashIndex >= 0 ? hashIndex : Number(state.slide) || 0;
 
-let resizeTimer;
-window.addEventListener("resize", () => {
-  window.clearTimeout(resizeTimer);
-  resizeTimer = window.setTimeout(() => placeTraveler(false), 120);
-});
-
-if (document.fonts && document.fonts.ready) {
-  document.fonts.ready.then(() => placeTraveler(false));
+  hook();
+  sequence();
+  quiz();
+  closing();
+  bindDeck();
+  goTo(start, { focus: false });
 }
+
+init();
